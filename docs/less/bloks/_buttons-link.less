@@ -1,0 +1,79 @@
+.button(@padding,@height,@font-size) {
+  padding: 0 @padding;
+  height: @height;
+  font-size: @font-size;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+.button-link {
+  .button(39px, 64px, 22px);
+  position: relative;
+  border: 4px solid var(--grayColor);
+  color: var(--grayColor);
+
+  &:hover {
+    top: -4px;
+    box-shadow: 0 5px #3f3403;
+    transition: all 0.5s;
+    color: var(--grayLinkHover);
+    border: 4px solid var(--grayLinkHover);
+  }
+
+  &:active {
+    top: -1px;
+    box-shadow: 0 2px #3f3403;
+    transition: all 0.5s;
+    color: var(--grayLinkActive);
+    border: 4px solid var(--grayLinkActive);
+  }
+}
+
+.button-link--yellow {
+  .button(39px, 64px, 22px);
+  position: relative;
+
+  border: 4px solid var(--yellowColor);
+  background-color: var(--yellowColor);
+  color: var(--blackColor);
+
+  &:hover {
+    top: -4px;
+    box-shadow: 0 5px #3f3403;
+    transition: all 0.5s;
+  }
+
+  &:active {
+    top: -1px;
+    box-shadow: 0 2px #3f3403;
+    transition: all 0.5s;
+  }
+}
+
+.ml15px {
+  margin-left: 15px;
+}
+
+.button-link--contacts {
+  .button(73px, 54px, 20px);
+
+  &:hover {
+    top: -4px;
+    box-shadow: 0 5px #3f3403;
+    transition: all 0.5s;
+  }
+
+  &:active {
+    top: -1px;
+    box-shadow: 0 2px #3f3403;
+    transition: all 0.5s;
+  }
+
+  @media (min-width: 1200px) {
+    margin-left: 50px;
+  }
+}

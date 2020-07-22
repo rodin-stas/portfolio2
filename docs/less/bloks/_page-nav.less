@@ -1,0 +1,29 @@
+#page-nav {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  z-index: 20;
+  display: none;
+
+  @media (min-width: 998px) {
+    display: block;
+  }
+
+  & li {
+    width: 12px;
+    height: 12px;
+    background-color: var(--yellowColor);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: 2s;
+  }
+
+  & li a {
+    display: block;
+    height: 100%;
+  }
+}
+
+#page-nav li.active {
+  background-color: red;
+}

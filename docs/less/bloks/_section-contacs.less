@@ -1,0 +1,252 @@
+#section-contacs {
+  background-image: url(/docs/img/contacts/contacts-line.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  @media (min-width: 768px) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+
+#section-contacs h2 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin-bottom: 34px;
+
+  @media (min-width: 768px) {
+    font-size: 52px;
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 64px;
+  }
+}
+
+.contacs-text::before {
+  position: absolute;
+  width: 400px;
+  height: 255px;
+  background-image: url(/docs/img/contacts/BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  transform: translate(-300px, -22px);
+
+  @media (min-width: 1200px) {
+    content: " ";
+  }
+}
+
+.contacs-row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: 576px) {
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 998px) {
+  }
+
+  @media (min-width: 1200px) {
+  }
+}
+
+.contacs-text {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  & p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 27px;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 45px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    max-width: 291px;
+    margin-right: 40px;
+    margin-bottom: 0;
+    margin: 0;
+  }
+
+  @media (min-width: 998px) {
+    max-width: 391px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 500px;
+  }
+}
+
+.contacts-item {
+  margin-bottom: 40px;
+  //   display: inline-block;
+}
+.contact {
+  @media (min-width: 1200px) {
+    display: flex;
+  }
+
+  & h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+
+    @media (min-width: 1200px) {
+      font-size: 20px;
+      display: block;
+      width: 108px;
+      margin-right: 109px;
+    }
+  }
+
+  & a {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+    &:hover {
+      color: #039be5;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 20px;
+    }
+  }
+  & span {
+    color: #96969d;
+    font-size: 18px;
+    font-weight: 500;
+
+    @media (min-width: 1200px) {
+      font-size: 20px;
+    }
+  }
+}
+
+.contac--gray {
+  color: #96969d;
+}
+
+.display-block {
+  display: block;
+  & a {
+    margin-right: 27px;
+  }
+}
+
+.contacts-form {
+  padding: 40px 20px;
+  text-align: center;
+  min-width: 290px;
+  // height: 460px;
+  box-shadow: 0 28px 40px #c2dbeb;
+  background-color: #ffffff;
+
+  @media (min-width: 768px) {
+    min-width: 339px;
+  }
+
+  @media (min-width: 998px) {
+    min-width: 439px;
+  }
+
+  @media (min-width: 1200px) {
+    text-align: left;
+    min-width: 511px;
+  }
+}
+
+.contacs-form__item-vrapper {
+  margin-bottom: 33px;
+}
+
+.contacts-form__item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 5px 10px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.contacts-form__btn {
+  padding: 0 auto;
+  margin: 0 auto;
+}
+.form-field {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  transition: all 1s;
+}
+
+.form-field-text {
+  height: auto;
+  // margin-bottom: 20px;
+}
+
+.fake-placeholder {
+  position: absolute;
+  color: #bcbcbc;
+  font-family: "Mplus 1p", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  top: 8px;
+  left: 15px;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+
+.fake-placeholder.active {
+  color: #ed9626;
+  font-size: 16px;
+  top: -15px;
+  left: 15px;
+  transition: all 0.5s;
+}
+
+.form-field.active {
+  border-bottom: 1px solid #ea736d;
+  transition: all 0.5s;
+}

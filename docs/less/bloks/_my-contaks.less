@@ -1,0 +1,63 @@
+
+.my-contaks {
+  margin-bottom: 20px;
+  & a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+
+    transition: 2s ease;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      transition: 1s;
+      transform: rotate(360deg);
+    }
+  }
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.my-contaks.my-contaks--header {
+  @media (min-width: 1200px) {
+    display: block;
+    & a {
+      margin-right: 30px;
+    }
+  }
+}
+.my-contaks__mail {
+  // width: 231px;
+  display: inline-block;
+  text-shadow: 0 3px 42px #ffffff;
+  font-size: 24px;
+  font-weight: 400;
+  border-bottom: 1.5px solid #000;
+  transition: all 0.5s;
+
+  &:hover {
+    color: #039be5;
+    border-bottom: 1.5px solid #039be5;
+    transition: all 0.5s;
+  }
+  &:active {
+    color: #ea655f;
+    border-bottom: 1.5px solid #ea655f;
+  }
+  @media (min-width: 1200px) {
+    transition: all 0.5s;
+    display: none;
+  }
+}
+
+.my-contaks__mail--header {
+  @media (min-width: 1200px) {
+    display: inline-block;
+  }
+}
