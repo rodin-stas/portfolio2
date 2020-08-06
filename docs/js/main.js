@@ -29,10 +29,26 @@ $(document).ready(function () {
 
   //menu
   const menu = document.querySelector(".toggle-menu");
-  const body = document.querySelector(".body");
+  const mybody = document.querySelector(".body");
+  const navLink = document.querySelector(".header-nav__link");
+  
+  function removeActivClass(){
+    mobileToggleMenu.classList.remove("active");
+    overlay.classList.remove("active");
+    mybody.classList.remove("active");
+  }
+
   menu.addEventListener("click", function () {
-    body.classList.toggle("active");
+    mybody.classList.toggle("active");
   });
+
+  mobMenu .addEventListener("click", function () {
+    this.classList.toggle("active");
+    removeActivClass();
+    
+  });
+
+  
   //----------------------------------------------
   mobileToggleMenu.addEventListener("click", function () {
     mobMenu.classList.toggle("active");
@@ -42,8 +58,7 @@ $(document).ready(function () {
 
   window.addEventListener("resize", function () {
     mobMenu.classList.remove("active");
-    mobileToggleMenu.classList.remove("active");
-    overlay.classList.remove("active");
+        removeActivClass();
   });
 
   // fake-placeholder-conta

@@ -206,7 +206,7 @@ button {
   padding: 15px 0 40px;
   margin: 0 auto;
   overflow: hidden;
-  background-image: url(/docs/img/header/header-bg.jpg);
+  background-image: url(../img/header/header-bg.jpg);
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
@@ -1052,7 +1052,7 @@ button {
   fill: #7cc0ff;
 }
 #section-iwork {
-  background-image: url(/docs/img/iwork/work-line.jpg);
+  background-image: url(../img/iwork/work-line.jpg);
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
@@ -1212,7 +1212,7 @@ button {
   }
 }
 #section-contacs {
-  background-image: url(/docs/img/contacts/contacts-line.jpg);
+  background-image: url(../img/contacts/contacts-line.jpg);
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
@@ -1253,7 +1253,7 @@ button {
   position: absolute;
   width: 400px;
   height: 255px;
-  background-image: url(/docs/img/contacts/BG.png);
+  background-image: url(../img/contacts/BG.png);
   background-repeat: no-repeat;
   background-size: cover;
   transform: translate(-300px, -22px);
