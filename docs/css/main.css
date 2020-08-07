@@ -170,9 +170,6 @@ button {
 .overlay.active {
   display: block;
 }
-.none {
-  display: none;
-}
 #page-nav {
   position: fixed;
   top: 50%;
@@ -219,11 +216,18 @@ button {
 .developer-wrapper {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 @media (min-width: 768px) {
   .developer-wrapper {
     flex-direction: row-reverse;
     align-items: center;
+    margin-top: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .developer-wrapper {
+    margin-top: 140px;
   }
 }
 .developer-info h1 {
@@ -575,7 +579,6 @@ button {
   max-width: 575px;
   margin: 0 auto;
   padding: 0 15px;
-  margin-bottom: 20px;
 }
 @media (min-width: 576px) {
   .header-nav {
@@ -585,7 +588,6 @@ button {
 @media (min-width: 768px) {
   .header-nav {
     max-width: 997px;
-    margin-bottom: 40px;
   }
 }
 @media (min-width: 998px) {
@@ -596,13 +598,21 @@ button {
 @media (min-width: 1200px) {
   .header-nav {
     max-width: 1400px;
-    margin-bottom: 140px;
   }
 }
 @media (min-width: 1430px) {
   .header-nav {
     padding: 0;
   }
+}
+.fix-menu.active {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--bgColor);
+  box-shadow: 0 10px 3px rgba(0, 0, 0, 0.45);
 }
 .header-logo__wraper {
   width: 68px;
@@ -687,8 +697,7 @@ button {
     border-style: dotted;
     border-color: var(--linkFocusColor);
   }
-  .header-nav__link:hover::after,
-  .header-nav__link:active::after {
+  .header-nav__link::after {
     content: " ";
     position: relative;
     z-index: -1;
@@ -696,6 +705,13 @@ button {
     height: 6px;
     background-color: var(--colorTitleLine);
     transform: translateY(-7px);
+    width: 0;
+  }
+  .header-nav__link:hover::after,
+  .header-nav__link:active::after {
+    content: " ";
+    width: 100%;
+    transition: 0.7s;
   }
 }
 @media (min-width: 1200px) {
@@ -1466,7 +1482,6 @@ button {
   color: #b0b0b0;
 }
 #back-top a {
-  display: none;
   position: fixed;
   bottom: 40px;
   right: 20px;
@@ -1476,7 +1491,7 @@ button {
 }
 @media (min-width: 998px) {
   #back-top a {
-    display: block;
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

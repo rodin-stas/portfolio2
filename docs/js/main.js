@@ -27,6 +27,16 @@ $(document).ready(function () {
     else{$('#back-top').fadeOut()}
   })
 
+  //fix-menu
+  window.addEventListener('scroll' , function(){
+   const fixMenu = document.querySelector(".fix-menu");
+   if(this.pageYOffset > 50){
+    fixMenu.classList.add("active")
+   } else{
+    fixMenu.classList.remove("active")
+   }
+  });
+
   //menu
   const menu = document.querySelector(".toggle-menu");
   const mybody = document.querySelector(".body");
@@ -61,7 +71,7 @@ $(document).ready(function () {
         removeActivClass();
   });
 
-  // fake-placeholder-conta
+  // fake-placeholder-contant
   const formInputs = document.querySelectorAll(".form-field ");
 
   for (item of formInputs) {
