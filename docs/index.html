@@ -451,10 +451,13 @@
 
                     </div>
 
-                    <div class="contacts-form">
+                    <form class="contacts-form" id="contacts-form">
+                        <input type="hidden" name="project_name" value="portfolio">
+                        <input type="hidden" name="admin_email" value="rodinstas@gmail.com">
+                        <input type="hidden" name="email_from" value="mail@portfolio.ru">
 
                         <div class="contacts-form__item">
-                            <input class="form-field" type="text" name="imail" height="30">
+                            <input class="form-field" type="text" name="email" height="30">
                             <span class="fake-placeholder">Ваш email</span>
                         </div>
 
@@ -464,17 +467,18 @@
                         </div>
 
                         <div class="contacts-form__item">
-                            <textarea class="form-field form-field-text" name="text" id="" cols="30"
+                            <textarea class="form-field form-field-text" name="message" cols="30"
                                 rows="5"></textarea>
                             <span class="fake-placeholder">Сообщение</span>
                         </div>
 
 
                         <div class="contacts-form__btn">
-                            <button class="button-link--contacts button-link--yellow ">Отправить</button>
+                            <input class="button-link--contacts button-link--yellow " type="submit" value="Отправить"/>
                         </div>
 
-                    </div>
+                    </form>
+                    <div id="answer"></div>
 
                 </div>
             </div>
@@ -497,6 +501,7 @@
     <!-- Плагины и библиотеки -->
     <script src="libs/jquery/jquery-3.4.1.min.js"></script>
     <script src="libs/nav.js/nav.js"></script>
+    <script src="libs/jquery.validate/jquery.validate.js"></script>
     <!-- Пользовательские скрипты -->
     <script src="js/main.js"></script>
 
